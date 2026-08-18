@@ -1,56 +1,50 @@
+#42445A@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 :root {
-  --cor-fundo-escuro: #000000;
-  --cor-fundo-medio: #118344;
-  --cor-fundo-claro: #f0f7f4;
-  --cor-primaria: #00c97a;
-  --cor-primaria-escura: #009958;
-  --cor-secundaria: #ffe135;
-  --cor-texto-claro: #edfaf3;
-  --cor-texto-escuro: #052e1c;
-  --cor-texto-suave: #7db89a;
-  --cor-borda: rgba(0, 201, 122, 0.12);
+    --cor-fundo-escuro: #000000;
+    --cor-fundo-medio: #118344;
+    --cor-fundo-claro: #f0f7f4;
+    --cor-primaria: #00c97a;
+    --cor-primaria-escura: #009958;
+    --cor-secundaria: #ffe135;
+    --cor-texto-claro: #edfaf3;
+    --cor-texto-escuro: #052e1c;
+    --cor-texto-suave: #7db89a;
+    --cor-borda: rgba(0, 201, 122, 0.12);
 
-  --fonte-principal: "Inter", sans-serif;
-  --espacamento-secao: 6rem;
-  --raio-borda: 14px;
-  --raio-borda-pequeno: 8px;
-  --largura-maxima: 1140px;
+    --fonte-principal: "Inter", sans-serif;
+    --fonte-display: "Playfair Display", serif;
+
+    --espacamento-secao: 6rem;
+    --raio-borda: 14px;
+    --raio-borda-pequeno: 8px;
+    --largura-maxima: 1140px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    /* configurar fonte */
     font-family: var(--fonte-principal);
-
-    /* cor de fundo */
     background-color: var(--cor-fundo-escuro);
-
-    /* cor da fonte-texto */
     color: var(--cor-texto-claro);
-
-    /* /* altura da linha do texto */
     line-height: 1.6;
 }
 
 a {
-    /* Decoração do texto */
-    text-emphasis: none;
+    text-decoration: none;
     color: var(--cor-texto-claro);
-
-    /* animação */
     transition: color 0.3s ease;
 }
 
 ul {
-    /* Estilização da linha */
     list-style: none;
 }
 
@@ -59,28 +53,33 @@ img {
     display: block;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     line-height: 1.2;
     font-weight: 700;
 }
 
-
-.container{
+.container {
     max-width: var(--largura-maxima);
     margin: 0 auto;
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
 }
 
-/* botao */
+
+/* =========================
+   BOTÕES
+========================= */
 
 .btn {
-    padding: o.85 rem 2 rem;
+    display: inline-block;
+    padding: 0.85rem 2rem;
     border-radius: var(--raio-borda);
     font-weight: 600;
-    font-size: 1 rem;
+    font-size: 1rem;
     cursor: pointer;
     border: 2px solid transparent;
-    width: 900%;
     transition: all 0.3s ease;
 }
 
@@ -88,353 +87,347 @@ h1, h2, h3, h4{
     background-color: var(--cor-primaria);
     color: #000000;
     font-weight: 700;
-    
-
 }
 
-.btn-primario:hover{
+.btn-primario:hover {
     background-color: transparent;
-    color:var(--cor-texto-claro);
-    border-color:var(--cor-texto-claro);
+    color: var(--cor-texto-claro);
+    border-color: var(--cor-texto-claro);
 }
 
-.btn-secundario{
+.btn-secundario {
     background-color: transparent;
     color: var(--cor-texto-claro);
     border-color: var(--cor-fundo-claro);
 }
 
-.btn-secundario:hover{
-   background-color: var( --cor-texto-claro);
-    border-color: var(--cor-fundo-claro);
-    color: var(--cor-fundo-escuro)
+.btn-secundario:hover {
+    background-color: var(--cor-texto-claro);
+    border-color: var(--cor-texto-claro);
+    color: var(--cor-fundo-escuro);
 }
 
-.btn-grande{
+.btn-grande {
     width: 100%;
     padding: 1.1rem;
     font-size: 1.1rem;
 }
 
-/* Bloco de cabeçalho padrão de cada seção */
-.secao-titulo {
+
+/* =========================
+   TÍTULOS DAS SEÇÕES
+========================= */
+
+.secao-titulo,
+.selecao-titulo {
     text-align: center;
     margin-bottom: 3rem;
-  }
-  
-  .secao-titulo h2 {
+}
+
+.secao-titulo h2,
+.selecao-titulo h2 {
     font-family: var(--fonte-display);
     font-size: 3rem;
     font-weight: 400;
-    letter-spacing: 1px;  /* Espaço entre as letras */
+    letter-spacing: 1px;
     margin-bottom: 0.5rem;
-  }
-  
-  .secao-titulo p {
+}
+
+.secao-titulo p,
+.selecao-titulo p {
     color: var(--cor-texto-suave);
     font-size: 1.05rem;
-  }
-  
-  /* ----------------------------------------------------------------
-     4. NAVBAR
-     Menu superior fixado no topo da página.
-  ---------------------------------------------------------------- */
-  #navbar {
-    position: sticky;      /* Fica colado no topo ao rolar a página */
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+#navbar {
+    position: sticky;
     top: 0;
     padding: 1rem 0;
     background-color: var(--cor-fundo-escuro);
     border-bottom: 1px solid var(--cor-borda);
-    z-index: 100;          /* Garante que o menu fique sempre na frente dos outros elementos */
-  }
-  
-  .nav-container {
+    z-index: 100;
+}
+
+.nav-container {
     display: flex;
-    justify-content: space-between; /* Logo na esquerda, links na direita */
-    align-items: center;            /* Alinha verticalmente no centro */
+    justify-content: space-between;
+    align-items: center;
     max-width: var(--largura-maxima);
     margin: 0 auto;
     padding: 0 1.5rem;
-  }
-  
-  .nav-logo {
+}
+
+.nav-logo {
     font-family: var(--fonte-display);
     font-size: 1.7rem;
     font-weight: 400;
     letter-spacing: 1px;
-  }
-  
-  .logo-destaque {
+}
+
+.logo-destaque {
     color: var(--cor-primaria);
-  }
-  
-  .nav-links {
+}
+
+.nav-container ul {
     display: flex;
-    gap: 2rem; /* Espaço entre cada link do menu */
-  }
-  
-  .nav-links a {
+    gap: 2rem;
+}
+
+.nav-container ul a {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--cor-texto-suave);
     letter-spacing: 0.5px;
-  }
-  
-  /* Fica verde ao passar o mouse */
-  .nav-links a:hover {
+}
+
+.nav-container ul a:hover {
     color: var(--cor-primaria);
-  }
-  
-  /* ----------------------------------------------------------------
-     5. HEADER (Hero Section)
-     Primeira dobra do site: tela de impacto com chamada e imagem.
-  ---------------------------------------------------------------- */
-  header {
-    min-height: 100vh;     /* Ocupa pelo menos 100% da altura da tela */
+}
+
+
+/* =========================
+   HOME / HEADER
+========================= */
+
+#home {
+    min-height: 100vh;
     display: flex;
-    align-items: center;   /* Centraliza o conteúdo verticalmente */
+    align-items: center;
     padding: 8rem 1.5rem 5rem;
     background-color: var(--cor-fundo-medio);
-  }
-  
-  .header-content {
+}
+
+.header-content {
     max-width: var(--largura-maxima);
     margin: 0 auto;
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 4rem;             /* Distância entre a coluna de texto e a imagem */
-  }
-  
-  .header-texto {
-    flex: 1;               /* Ocupa todo o espaço disponível na esquerda */
-  }
-  
-  .header-imagem {
-    flex-shrink: 0;        /* Impede a imagem de ser esmagada se a tela diminuir */
+    gap: 4rem;
+}
+
+.header-texto {
+    flex: 1;
+}
+
+.header-content > div:last-child {
+    flex-shrink: 0;
     width: 42%;
-    height: 380px;
-    border-radius: var(--raio-borda);
-    overflow: hidden;      /* Corta as bordas da foto para respeitar o border-radius */
-  }
-  
-  .header-foto {
+}
+
+.header-content > div:last-child img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;     /* Preenche o quadrado sem distorcer ou esticar */
-    object-position: center;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  
-  /* Zoom suave na foto ao passar o mouse sobre o container */
-  .header-imagem:hover .header-foto {
-    transform: scale(1.04);
-  }
-  
-  .header-subtitulo {
+    border-radius: var(--raio-borda);
+}
+
+.header-subtitulo {
     font-size: 0.9rem;
     letter-spacing: 2px;
-    text-transform: uppercase; /* Deixa tudo em MAIÚSCULAS */
+    text-transform: uppercase;
     color: var(--cor-primaria);
     margin-bottom: 1.2rem;
-  }
-  
-  .header-titulo {
+}
+
+.header-titulo {
     font-family: var(--fonte-display);
     font-size: 6rem;
     font-weight: 400;
     line-height: 0.95;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
-  }
-  
-  .header-descricao {
+}
+
+.header-descricao {
     font-size: 1.1rem;
     color: var(--cor-texto-suave);
     max-width: 480px;
     margin-bottom: 2.5rem;
-  }
-  
-  .header-botoes {
+}
+
+.header-texto > div {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;       /* Se não couber na largura, joga o segundo botão para baixo */
-  }
-  
-  /* ----------------------------------------------------------------
-     6. CLASSES BASE DAS SEÇÕES
-     Alternância entre seções claras e escuras para dar contraste.
-  ---------------------------------------------------------------- */
-  .secao {
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
     padding: var(--espacamento-secao) 0;
-  }
-  
-  .secao-escura {
+}
+
+.secao-escura {
     background-color: var(--cor-fundo-escuro);
     color: var(--cor-texto-claro);
-  }
-  
-  .secao-clara {
+}
+
+.secao-clara {
     background-color: var(--cor-fundo-claro);
     color: var(--cor-texto-escuro);
-  }
-  
-  .secao-clara .secao-titulo p {
+}
+
+.secao-clara .secao-titulo p {
     color: #666;
-  }
-  
-  /* ----------------------------------------------------------------
-     7. SECTION 1 — GRID DE SELEÇÕES
-     Cards organizados em 3 colunas iguais.
-  ---------------------------------------------------------------- */
-  .grid-selecoes {
+}
+
+
+/* =========================
+   SELEÇÕES
+========================= */
+
+#selecoes {
+    padding: var(--espacamento-secao) 0;
+    background-color: var(--cor-fundo-escuro);
+}
+
+.grid-selecoes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanho idêntico (1 fração cada) */
-    gap: 1.5rem;                           /* Espaço entre os cards */
-  }
-  
-  .card-selecao {
-    background-color: rgba(255, 255, 255, 0.04); /* Fundo sutilmente translúcido */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card-selecao {
+    background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-borda);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-  
-  /* Card sobe levemente e ganha destaque de borda verde no hover */
-  .card-selecao:hover {
+}
+
+.card-selecao:hover {
     transform: translateY(-6px);
     border-color: var(--cor-primaria);
-  }
-  
-  .card-imagem {
+}
+
+.card-imagem {
     width: 100%;
     height: 200px;
     overflow: hidden;
-  }
-  
-  .card-foto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-  
-  /* Pequeno zoom na foto da seleção ao passar o mouse */
-  .card-selecao:hover .card-foto {
-    transform: scale(1.06);
-  }
-  
-  .card-corpo {
-    padding: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    flex: 1;               /* Faz todos os corpos de card terem a mesma altura total */
-  }
-  
-  .card-dia {
-    font-size: 0.78rem;
-    color: var(--cor-primaria);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-  
-  /* Etiqueta amarela (badge) */
-  .tag-palco {
-    display: inline-block;
-    margin-top: auto;      /* Empurra a tag sempre para o final do card */
-    padding: 0.3rem 0.8rem;
-    background-color: rgba(255, 223, 0, 0.15);
-    color: var(--cor-secundaria);
-    border-radius: 50px;   /* Deixa a tag em formato de pílula redondinha */
-    font-size: 0.75rem;
-    font-weight: 600;
-    align-self: flex-start;
-  }
-  
-  .card-corpo h3 {
-    font-size: 1.05rem;
-    margin-bottom: 0.1rem;
-  }
-  
-  .card-corpo p {
-    font-size: 0.85rem;
-    color: var(--cor-texto-suave);
-  }
-  
-  /* ----------------------------------------------------------------
-     8. SECTION 2 — GRID DE GALERIA (Estádios)
-     Grid com layout de mosaico: a primeira foto ocupa espaço duplo.
-  ---------------------------------------------------------------- */
-  .grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 220px; /* Define que todas as linhas criadas terão 220px de altura */
-    gap: 1rem;
-  }
-  
-  .foto-item {
-    background-color: #1a1a2e;
-    border-radius: var(--raio-borda);
-    overflow: hidden;
-    position: relative;    /* Necessário para posicionar a legenda por cima da foto */
-  }
-  
-  /* Foto principal em destaque ocupando 2 colunas e 2 linhas */
-  .foto-grande {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .foto-img {
+}
+
+.card-foto {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
     transition: transform 0.4s ease;
-  }
-  
-  .foto-item:hover .foto-img {
+}
+
+.card-selecao:hover .card-foto {
+    transform: scale(1.06);
+}
+
+.card-corpo {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.card-dia {
+    font-size: 0.78rem;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.card-corpo h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.1rem;
+}
+
+.card-corpo p {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+}
+
+.tag-palco {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(255, 223, 0, 0.15);
+    color: var(--cor-secundaria);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+
+/* =========================
+   GALERIA DOS ESTÁDIOS
+========================= */
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 1rem;
+}
+
+.foto-item {
+    background-color: #1a1a2e;
+    border-radius: var(--raio-borda);
+    overflow: hidden;
+    position: relative;
+}
+
+.foto-grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.foto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.foto-item:hover .foto-img {
     transform: scale(1.05);
-  }
-  
-  /* Legenda translúcida sobreposta no rodapé da imagem */
-  .foto-legenda {
+}
+
+.foto-legenda {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 0.6rem 1rem;
-    background-color: rgba(0, 0, 0, 0.6); /* Preto semi-transparente para dar leitura */
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 0.85rem;
     font-weight: 500;
-  }
-  
-  /* ----------------------------------------------------------------
-     9. SECTION 3 — FORMULÁRIO + LOCALIZAÇÃO
-     Divide a tela em 2 blocos: formulário à esquerda e mapa/info à direita.
-  ---------------------------------------------------------------- */
-  .ingressos-layout {
+}
+
+
+/* =========================
+   INGRESSOS
+========================= */
+
+.ingresso-layout {
     display: flex;
     gap: 2.5rem;
-    align-items: flex-start; /* Evita que uma coluna force a outra a esticar */
-  }
-  
-  /* Faz o formulário e a lateral dividirem a largura igualmente */
-  .ingressos-layout > div,
-  .local-wrapper {
+    align-items: flex-start;
+}
+
+.form-ingresso,
+.local-wrapper {
     flex: 1;
-  }
-  
-  .formulario {
+}
+
+.formulario {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-borda);
@@ -442,35 +435,32 @@ h1, h2, h3, h4{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-  }
-  
-  /* Agrupa dois inputs lado a lado na mesma linha */
-  .form-linha {
+}
+
+.form-linha {
     display: flex;
     gap: 1.2rem;
-  }
-  
-  .form-linha .form-grupo {
-    flex: 1;               /* Cada campo na linha divide a largura ao meio */
-  }
-  
-  /* Empilha o label em cima do input */
-  .form-grupo {
+}
+
+.form-linha .form-grupo {
+    flex: 1;
+}
+
+.form-grupo {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-  }
-  
-  label {
+}
+
+label {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--cor-texto-claro);
-  }
-  
-  /* Estilo unificado para campos de texto, select e textarea */
-  input,
-  select,
-  textarea {
+}
+
+input,
+select,
+textarea {
     width: 100%;
     padding: 0.75rem 1rem;
     background-color: rgba(255, 255, 255, 0.07);
@@ -479,255 +469,278 @@ h1, h2, h3, h4{
     color: var(--cor-texto-claro);
     font-size: 1rem;
     font-family: inherit;
-    outline: none;         /* Remove a borda azul padrão do navegador */
+    outline: none;
     transition: border-color 0.3s ease;
-  }
-  
-  /* Ao clicar para digitar, a borda acende em verde */
-  input:focus,
-  select:focus,
-  textarea:focus {
+}
+
+input:focus,
+select:focus,
+textarea:focus {
     border-color: var(--cor-primaria);
-  }
-  
-  textarea {
-    resize: vertical;      /* Permite ao usuário redimensionar apenas na altura */
-  }
-  
-  /* Caixinha de checkbox (alinhamento horizontal) */
-  .form-checkbox {
-    flex-direction: row;   /* Coloca o checkbox ao lado do texto, e não em cima */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-checkbox {
+    flex-direction: row;
     align-items: center;
-  }
-  
-  .form-checkbox input {
-    width: auto;           /* Não ocupa 100% da largura, mantém o tamanho da caixinha */
+}
+
+.form-checkbox input {
+    width: auto;
     cursor: pointer;
-  }
-  
-  .form-checkbox label {
+}
+
+.form-checkbox label {
     cursor: pointer;
-  }
-  
-  .form-checkbox a {
+}
+
+.form-checkbox a {
     color: var(--cor-primaria);
     text-decoration: underline;
-  }
-  
-  /* Coluna direita: Informações e Mapa */
-  .local-wrapper {
+}
+
+
+/* =========================
+   LOCALIZAÇÃO E MAPA
+========================= */
+
+.local-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-  
-  .local-info {
+}
+
+.local-info {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-borda);
     padding: 1.5rem;
-  }
-  
-  .local-info h3 {
+}
+
+.local-info h3 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: var(--cor-texto-claro);
-  }
-  
-  .local-info address {
-    font-style: normal;    /* Tira o itálico padrão da tag <address> */
+}
+
+.local-info address {
+    font-style: normal;
     margin-bottom: 1rem;
-  }
-  
-  .local-info address p,
-  .local-contatos p {
+}
+
+.local-info address p,
+.local-contatos p {
     color: var(--cor-texto-suave);
     font-size: 0.9rem;
     margin-bottom: 0.4rem;
-  }
-  
-  /* Container do mapa interativo */
-  .mapa-wrapper {
+}
+
+.mapa-wrapper {
     border-radius: var(--raio-borda);
     overflow: hidden;
     border: 1px solid var(--cor-borda);
     height: 300px;
-  }
-  
-  .mapa-wrapper iframe {
+}
+
+.mapa-wrapper iframe {
     display: block;
     width: 100%;
     height: 100%;
-  }
-  
-  /* ----------------------------------------------------------------
-     10. FOOTER
-     Rodapé com links, descrição e copyright.
-  ---------------------------------------------------------------- */
-  footer {
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
     background-color: var(--cor-fundo-medio);
     border-top: 1px solid var(--cor-borda);
     padding: 4rem 0 2rem;
-  }
-  
-  .footer-grid {
+}
+
+.footer-grid {
     display: flex;
     justify-content: space-around;
     gap: 3rem;
     margin-bottom: 3rem;
-  }
-  
-  .footer-coluna h4 {
+}
+
+.footer-coluna {
+    flex: 1;
+}
+
+.footer-coluna h4 {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: var(--cor-texto-claro);
-  }
-  
-  .footer-coluna p {
+}
+
+.footer-coluna p {
     color: var(--cor-texto-suave);
     font-size: 0.9rem;
     line-height: 1.7;
-  }
-  
-  address {
-    font-style: normal;
-  }
-  
-  address p {
-    margin-bottom: 0.5rem;
-  }
-  
-  .redes-sociais {
+}
+
+.redes-sociais {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-  
-  .rede-link {
+}
+
+.rede-link {
     color: var(--cor-texto-suave);
     font-size: 0.9rem;
-  }
-  
-  .rede-link:hover {
-    color: var(--cor-secundaria); /* Amarelo no hover */
-  }
-  
-  .footer-fundo {
+}
+
+.rede-link:hover {
+    color: var(--cor-secundaria);
+}
+
+.footer-fundo {
     border-top: 1px solid var(--cor-borda);
     padding-top: 2rem;
     text-align: center;
     color: var(--cor-texto-suave);
     font-size: 0.85rem;
-  }
-  
-  /* ================================================================
-     12. RESPONSIVIDADE — MEDIA QUERIES
-     Adapta o layout para funcionar perfeitamente em Tablets e Celulares.
-  ================================================================ */
-  
-  /* ---- TABLET (telas de até 768px de largura) ---- */
-  @media (max-width: 768px) {
-    /* Diminui fontes gigantes para não quebrar a tela */
-    .secao-titulo h2 {
-      font-size: 2.4rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .secao-titulo h2,
+    .selecao-titulo h2 {
+        font-size: 2.4rem;
     }
-  
+
     .header-titulo {
-      font-size: 3.5rem;
+        font-size: 3.5rem;
     }
-  
-    /* Oculta os links da navbar para simplificar em telas médias */
-    .nav-links {
-      display: none;
+
+    .nav-container ul {
+        display: none;
     }
-  
-    header {
-      padding: 7rem 1.5rem 4rem;
+
+    #home {
+        padding: 7rem 1.5rem 4rem;
     }
-  
-    /* No header, empilha texto e imagem verticalmente */
+
     .header-content {
-      flex-direction: column;
-      gap: 2.5rem;
+        flex-direction: column;
+        gap: 2.5rem;
     }
-  
-    .header-imagem {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
+
+    .header-content > div:last-child {
+        width: 100%;
+        max-width: 480px;
     }
-  
-    /* Transforma o grid de seleções em 2 colunas */
+
     .grid-selecoes {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  
-    /* Transforma a galeria em 2 colunas */
+
     .grid-galeria {
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 200px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
     }
-  
-    /* A foto grande agora ocupa 2 colunas mas apenas 1 linha de altura */
+
     .foto-grande {
-      grid-column: span 2;
-      grid-row: span 1;
+        grid-column: span 2;
+        grid-row: span 1;
     }
-  
-    .footer-grid {
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  
-    .footer-coluna {
-      width: 45%;
-    }
-  
-    /* Inputs que ficavam lado a lado agora ficam empilhados */
+
     .form-linha {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
-    /* Formulário e mapa agora ficam um embaixo do outro */
-    .ingressos-layout {
-      flex-direction: column;
+
+    .ingresso-layout {
+        flex-direction: column;
     }
-  }
-  
-  /* ---- CELULAR (telas de até 480px de largura) ---- */
-  @media (max-width: 480px) {
-    .secao {
-      padding: 3rem 0;     /* Reduz o respiro das seções para aproveitar espaço */
+
+    .form-ingresso,
+    .local-wrapper {
+        width: 100%;
     }
-  
-    /* Cards de seleções viram 1 única coluna (lista vertical) */
-    .grid-selecoes {
-      grid-template-columns: 1fr;
+
+    .footer-grid {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-  
-    /* Galeria vira 1 única coluna */
-    .grid-galeria {
-      grid-template-columns: 1fr;
-      grid-auto-rows: 200px;
-    }
-  
-    /* Todas as fotos agora ocupam 1 espaço padrão */
-    .foto-grande {
-      grid-column: span 1;
-      grid-row: span 1;
-    }
-  
+
     .footer-coluna {
-      width: 100%;
+        width: 45%;
+        flex: none;
     }
-  
-    /* Botões do header empilhados para facilitar o clique com o polegar */
-    .header-botoes {
-      flex-direction: column;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        --espacamento-secao: 3rem;
     }
-  
+
+    .secao-titulo h2,
+    .selecao-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .header-titulo {
+        font-size: 3rem;
+    }
+
+    .header-subtitulo {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .header-descricao {
+        font-size: 1rem;
+    }
+
+    .header-texto > div {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .grid-selecoes {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+    }
+
+    .foto-grande {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
     .formulario {
-      padding: 1.5rem;     /* Reduz padding interno do formulário */
+        padding: 1.5rem;
     }
-  }
+
+    .footer-grid {
+        flex-direction: column;
+    }
+
+    .footer-coluna {
+        width: 100%;
+    }
+}
+
   
